@@ -1,0 +1,2 @@
+module KoansHelper
+end

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @koan.name %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @koan.question %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @koan.code %>
+</p>
+
+<p>
+  <b>Actual answer:</b>
+  <%= @koan.actual_answer %>
+</p>
+
+<p>
+  <b>Proposed answer:</b>
+  <%= @koan.proposed_answer %>
+</p>
+
+
+<%= link_to 'Edit', edit_koan_path(@koan) %> |
+<%= link_to 'Back', koans_path %>

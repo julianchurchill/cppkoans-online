@@ -1,0 +1,31 @@
+<h1>Listing koans</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Question</th>
+    <th>Code</th>
+    <th>Actual answer</th>
+    <th>Proposed answer</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @koans.each do |koan| %>
+  <tr>
+    <td><%= koan.name %></td>
+    <td><%= koan.question %></td>
+    <td><%= koan.code %></td>
+    <td><%= koan.actual_answer %></td>
+    <td><%= koan.proposed_answer %></td>
+    <td><%= link_to 'Show', koan %></td>
+    <td><%= link_to 'Edit', edit_koan_path(koan) %></td>
+    <td><%= link_to 'Destroy', koan, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Koan', new_koan_path %>
