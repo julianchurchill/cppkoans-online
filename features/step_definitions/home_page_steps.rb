@@ -1,8 +1,9 @@
 
 When /^I visit the home page$/ do
-  pending
+  visit "/"
 end
 
 Then /^the home page shows "(.*?)"$/ do |text|
-  pending
+  page.should have_content text
 end
+
