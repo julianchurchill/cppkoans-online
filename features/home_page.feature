@@ -6,4 +6,4 @@ Feature: home page
 
     Scenario: The home page shows a welcome message
         When I visit the home page
-        Then the home page shows "Welcome to C++ Koans Online!"
+        Then the page shows "Welcome to C++ Koans Online!"
