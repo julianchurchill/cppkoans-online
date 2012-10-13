@@ -1,6 +1,6 @@
 
 When /^I enter "(.*?)" in the "(.*?)" field$/ do |text,element_id|
-  pending
+  fill_in element_id, with: text
 end
 
 Then /^the page shows "(.*?)"$/ do |text|
@@ -8,11 +8,11 @@ Then /^the page shows "(.*?)"$/ do |text|
 end
 
 Then /^the page does not show "(.*?)"$/ do |text|
-  pending
+  page.should_not have_content text
 end
 
 Then /^the page has a text box with id "(.*?)"$/ do |element_id|
-  pending
+  page.should have_element element_id
 end
 
 Then /^the text box with id "(.*?)" is empty$/ do |element_id|
