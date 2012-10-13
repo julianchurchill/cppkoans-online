@@ -4,7 +4,7 @@ When /^I enter "(.*?)" in the "(.*?)" field$/ do |text,element_id|
 end
 
 When /^I press the button "(.*?)"$/ do |element_id|
-  pending
+  click_on element_id
 end
 
 Then /^the page shows "(.*?)"$/ do |text|
@@ -16,17 +16,18 @@ Then /^the page does not show "(.*?)"$/ do |text|
 end
 
 Then /^the page has a text box with id "(.*?)"$/ do |element_id|
-  page.should have_element element_id
+  page.should have_field element_id
 end
 
 Then /^the text box with id "(.*?)" is empty$/ do |element_id|
-  pending
+  find_field( element_id ).value.should eq ""
 end
 
 Then /^the page has a button with id "(.*?)"$/ do |element_id|
-  pending
+  page.should have_button element_id
 end
 
 Then /^the button with id "(.*?)" has the text "(.*?)"$/ do |element_id,text|
-  pending
+  find_button( element_id ).text.should eq text
 end
+
