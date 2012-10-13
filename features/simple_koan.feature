@@ -12,16 +12,19 @@ Feature: simple koan
         And the page shows "bool true = "
         And the page has a text box with id "answer"
         And the text box with id "answer" is empty
-        And the page has a button with the text "Submit"
+        And the page has a button with id "submit"
+        And the button with id "submit" has the text "Submit"
 
     Scenario: Answering a koan correctly displays success
         When I visit the home page
         And I enter "true" in the "answer" field
+        And I press the button "submit"
         Then the page shows "Correct!"
         And the page does not show "Incorrect!"
 
     Scenario: Answering a koan incorrectly displays failure
         When I visit the home page
         And I enter "false" in the "answer" field
+        And I press the button "submit"
         Then the page shows "Incorrect!"
         And the page does not show "Correct!"
