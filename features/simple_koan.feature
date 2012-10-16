@@ -1,5 +1,4 @@
 
-@wip
 Feature: simple koan
     In order to perform a koan
     As a site visitor
@@ -15,6 +14,7 @@ Feature: simple koan
         And the page has a button with id "submit"
         And the button with id "submit" has the text "Submit"
 
+    @wip
     Scenario: Answering a koan correctly displays success
         When I visit the home page
         And I enter "true" in the "answer" field
@@ -22,6 +22,7 @@ Feature: simple koan
         Then the page shows "Correct!"
         And the page does not show "Incorrect!"
 
+    @wip
     Scenario: Answering a koan incorrectly displays failure
         When I visit the home page
         And I enter "false" in the "answer" field

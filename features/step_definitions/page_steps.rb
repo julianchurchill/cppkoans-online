@@ -28,6 +28,6 @@ Then /^the page has a button with id "(.*?)"$/ do |element_id|
 end
 
 Then /^the button with id "(.*?)" has the text "(.*?)"$/ do |element_id,text|
-  find_button( element_id ).text.should eq text
+  find_button( element_id ).value.should eq text
 end
 
