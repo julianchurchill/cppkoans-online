@@ -20,9 +20,9 @@ Feature: simple koan
     @wip
     Scenario: The home page shows the first koan available
         Given a koan is set up like this
-            | instructions | make i equal to 14 |
-            | code         | int i = ___; |
-            | answer       | 14 |
+            | question      | make i equal to 14 |
+            | code          | int i = ___; |
+            | actual_answer | 14 |
         When I visit the home page
         Then the page shows "make i equal to 14"
         And the page shows "int i = "
@@ -34,9 +34,9 @@ Feature: simple koan
     @wip
     Scenario: Answering a koan correctly displays success
         Given a koan is set up like this
-            | instructions | make i equal to 14 |
-            | code         | int i = ___; |
-            | answer       | 14 |
+            | question      | make i equal to 14 |
+            | code          | int i = ___; |
+            | actual_answer | 14 |
         When I visit the home page
         And I enter "14" in the "answer" field
         And I press the button "submit"
@@ -46,9 +46,9 @@ Feature: simple koan
     @wip
     Scenario: Answering a koan incorrectly displays failure
         Given a koan is set up like this
-            | instructions | make i equal to 14 |
-            | code         | int i = ___; |
-            | answer       | 14 |
+            | question      | make i equal to 14 |
+            | code          | int i = ___; |
+            | actual_answer | 14 |
         When I visit the home page
         And I enter "99" in the "answer" field
         And I press the button "submit"

@@ -1,3 +1,14 @@
+Given /^a koan is set up like this$/ do |values|
+  #@koan = Koan.new values
+  @koan = Koan.new
+  values.raw.each do |row|
+    field_name = row[0]
+    field_value = row[1]
+    @koan.question = field_value if field_name == "question"
+    @koan.code = field_value if field_name == "code"
+    @koan.actual_answer = field_value if field_name == "actual_answer"
+  end
+end
 
 When /^I enter "(.*?)" in the "(.*?)" field$/ do |text,element_id|
   fill_in element_id, with: text
