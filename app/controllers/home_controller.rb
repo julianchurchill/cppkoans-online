@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @koans = []
+    @koans = Koan.available_koans
   end
 end

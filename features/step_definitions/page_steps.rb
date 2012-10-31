@@ -1,5 +1,4 @@
 Given /^a koan is set up like this$/ do |values|
-  #@koan = Koan.new values
   @koan = Koan.new
   values.raw.each do |row|
     field_name = row[0]
@@ -8,6 +7,7 @@ Given /^a koan is set up like this$/ do |values|
     @koan.code = field_value if field_name == "code"
     @koan.actual_answer = field_value if field_name == "actual_answer"
   end
+  @koan.add_to_list_of_available_koans
 end
 
 When /^I enter "(.*?)" in the "(.*?)" field$/ do |text,element_id|
