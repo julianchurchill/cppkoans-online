@@ -2,14 +2,11 @@
 <h1>Welcome to C++ Koans Online!</h1>
 <h2>First simple koan</h2>
 <p>Enter the answer in the box provided and hit the submit button</p>
-<form>
-  bool true = <input type="text" name="answer" value="">
-  <input type="submit" id="submit" value="Submit">
-</form>
 
 <% @koans.each do |koan| %>
   <%= koan.question %>
-  <%= koan.code[/(.*)___.*/, 1] %><input type="text" name="answer" value="val"><%= koan.code[/.*___(.*)/, 1] %>
+  <%= koan.code[/(.*)___.*/, 1] %><input type="text" name="answer" value=""><%= koan.code[/.*___(.*)/, 1] %>
 <% end %>
 
-<%= link_to "Koans", koans_path %>
+<input type="submit" id="submit" value="Submit">
+
