@@ -1,5 +1,5 @@
-class Koan < ActiveRecord::Base
-  attr_accessible :actual_answer, :code, :name, :proposed_answer, :question
+class Koan
+  attr_accessor :actual_answer, :code, :question
 
   @@available_koans = []
 
