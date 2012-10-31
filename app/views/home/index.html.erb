@@ -6,4 +6,9 @@
   bool true = <input type="text" name="answer" value="">
   <input type="submit" id="submit" value="Submit">
 </form>
+
+<% @koans.each do |koan| %>
+  <%= koan.question %>
+<% end %>
+
 <%= link_to "Koans", koans_path %>
