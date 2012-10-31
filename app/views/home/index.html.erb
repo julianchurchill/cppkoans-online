@@ -9,6 +9,7 @@
 
 <% @koans.each do |koan| %>
   <%= koan.question %>
+  <%= koan.code[/(.*)___.*/, 1] %><input type="text" name="answer" value="val"><%= koan.code[/.*___(.*)/, 1] %>
 <% end %>
 
 <%= link_to "Koans", koans_path %>

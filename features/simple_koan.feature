@@ -17,7 +17,6 @@ Feature: simple koan
     # Note this scenario is a replacement for the one above
     # Once this is passing the one above can be removed as well
     # as any associated code to make it work, e.g. text index,html.erb
-    @wip
     Scenario: The home page shows the first koan available
         Given a koan is set up like this
             | question      | make i equal to 14 |
