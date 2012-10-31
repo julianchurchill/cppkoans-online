@@ -25,8 +25,7 @@ Feature: simple koan
             | actual_answer | 14 |
         When I visit the home page
         Then the page shows "make i equal to 14"
-        And the page shows "int i = "
-        And the page has a text box with id "answer"
+        And the page contains "int i = " followed by a text box with id "answer" followed by ";"
         And the text box with id "answer" is empty
         And the page has a button with id "submit"
         And the button with id "submit" has the text "Submit"
