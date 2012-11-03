@@ -39,3 +39,16 @@ Feature: simple koan
         And I press the button "submit"
         Then the page shows "Incorrect!"
         And the page does not show "Correct!"
+
+    @future
+    Scenario: An koan is formatted with the correct CSS classes and DIVs
+
+    @future
+    Scenario: An unanswered koan is displayed without additional colours
+
+    @future
+    Scenario: A correctly answered koan is coloured green
+
+    @future
+    Scenario: An incorrectly answered koan is coloured red
+
