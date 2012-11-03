@@ -15,6 +15,8 @@ Feature: simple koan
         And the text box with id "answer" is empty
         And the page has a button with id "submit"
         And the button with id "submit" has the text "Submit"
+        And the page does not show "Correct!"
+        And the page does not show "Incorrect!"
 
     @wip
     Scenario: Answering a koan correctly displays success
@@ -28,7 +30,7 @@ Feature: simple koan
         Then the page shows "Correct!"
         And the page does not show "Incorrect!"
 
-    @wip
+    @future
     Scenario: Answering a koan incorrectly displays failure
         Given a koan is set up like this
             | question      | make i equal to 14 |
