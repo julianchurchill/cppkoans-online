@@ -19,7 +19,8 @@ When /^I press the button "(.*?)"$/ do |element_id|
 end
 
 Then /^the page contains "(.*?)" followed by a text box with id "(.*?)" followed by "(.*?)"$/ do |pre_text, text_box_id, post_text|
-  page.html.should match /#{pre_text}<input type="text" name="answer" value=".*?">#{post_text}/
+  page.html.should match /#{pre_text}<input [^>]*name="#{text_box_id}"[^>]*>#{post_text}/
+  page.html.should match /#{pre_text}<input [^>]*type="text"[^>]*>#{post_text}/
 end
 
 Then /^the page shows "(.*?)"$/ do |text|
