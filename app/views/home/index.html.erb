@@ -4,10 +4,10 @@
 <p>Enter the answer in the box provided and hit the submit button</p>
 
 <% @koans.each do |koan| %>
-<form>
-  <%= koan.question %>
-  <%= koan.code[/(.*)___.*/, 1] %><input type="text" name="answer" value=""><%= koan.code[/.*___(.*)/, 1] %>
-  <input type="submit" id="submit" value="Submit">
-</form>
+  <%= form_tag home_answer_koan_path do -%>
+    <%= koan.question %>
+    <%= koan.code[/(.*)___.*/, 1]%><%= text_field_tag "answer", "", :id => "answer" %><%= koan.code[/.*___(.*)/, 1] %>
+    <%= submit_tag "Submit", :id => "submit" %>
+  <% end -%>
 <% end %>
 

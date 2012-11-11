@@ -3,6 +3,8 @@ CppkoansOnline::Application.routes.draw do
 
   get "home/index"
 
+  match 'home/answer_koan' => 'home#answer_koan'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
